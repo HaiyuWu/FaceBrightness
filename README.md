@@ -1,2 +1,62 @@
-## Face Recognition Accuracy Across Demographics: Shining a Light Into the Problem
+# Face Brightness
+
+This repo is mainly sharing the code of face-skin-brightness metric and brightness-information-metric in the [Face Recognition Accuracy Across Demographics: Shining a Light Into the Problem](https://arxiv.org/pdf/2206.01881.pdf). Also it includes the code for calculating the imposter and genuine distributions, face feature extraction, and plots.
+
+## Face-skin-brightness metric
+
+This metric is used to measure the brightness level of an face image in terms of the upper face skin, which provides more accurate brightness measurement than the [commercial SDK](https://www.innovatrics.com/iface-sdk/).
+
+![fsb-example](https://github.com/SteveXWu/Face_Brightness/blob/main/images/fsb.png)
+
+![iface-fsb-comparison](https://github.com/SteveXWu/Face_Brightness/blob/main/images/iFace_fsb_comparison.png)
+
+#### Implementation
+
+Make sure the [face-parsing](https://github.com/SteveXWu/face-parsing.PyTorch) package is downloaded. Note that this package should be placed at the same directory level as your project, otherwise the path in [degree_separation.py](https://github.com/SteveXWu/Face_Brightness/blob/main/degree_separation.py) should be changed.
+
+```markdown
+.
+|---face-parsing
+|---project
+```
+
+Run brightness analyzing code
+
+```shell
+python depree_separation.py
+```
+
+## Brightness-information-metric
+
+This metric is used to measure the brightness variance of the face skin in order to reflect the information on the face.
+$$
+BIM=\sum_{i=0}^{N}|B_i-\bar{B}|P(B_i)
+$$
+
+#### Implementation
+
+```shell
+python brightness_information.py
+```
+
+## Imposter and genuine distributions
+
+We analyzed the effect of over-and-under exposed on the performance of the state-of-the-art model [ArcFace](https://github.com/deepinsight/insightface) (paper link: [ArcFace: Additive Angular Margin Loss for Deep Face Recognition](https://arxiv.org/pdf/1801.07698.pdf)). The distribution of African-American male are as below:
+
+![AAM_distribution](https://github.com/SteveXWu/Face_Brightness/blob/main/images/Arc_AA_M_mix.png)
+
+More detailed analyses can be found in [Face Recognition Accuracy Across Demographics: Shining a Light Into the Problem](https://arxiv.org/pdf/2206.01881.pdf).
+
+## Citation
+
+If you find any of the metric useful in your research, please consider to cite this paper:
+
+```
+@article{wu2022face,
+  title={Face Recognition Accuracy Across Demographics: Shining a Light Into the Problem},
+  author={Wu, Haiyu and Albiero, V{\'\i}tor and Krishnapriya, KS and King, Michael C and Bowyer, Kevin W},
+  journal={arXiv preprint arXiv:2206.01881},
+  year={2022}
+}
+```
 
