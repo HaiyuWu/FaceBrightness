@@ -29,9 +29,7 @@ python depree_separation.py
 ## Brightness-information-metric
 
 This metric is used to measure the brightness variance of the face skin in order to reflect the information on the face.
-$$
-BIM=\sum_{i=0}^{N}|B_i-\bar{B}|P(B_i)
-$$
+$$BIM=\sum_{i=0}^{N}|B_i-\bar{B}|P(B_i)$$
 
 #### Implementation
 
