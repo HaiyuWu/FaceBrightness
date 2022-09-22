@@ -50,7 +50,7 @@ More detailed analyses can be found in [Face Recognition Accuracy Across Demogra
 
 ## Citation
 
-If you find any of the metric useful in your research, please consider to cite this paper:
+If you find any of the tools useful in your research, please consider to cite this paper:
 
 ```
 @article{wu2022face,
