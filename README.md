@@ -53,11 +53,12 @@ More detailed analyses can be found in [Face Recognition Accuracy Across Demogra
 If you find any of the tools useful in your research, please consider to cite this paper:
 
 ```
-@article{wu2022face,
-  title={Face Recognition Accuracy Across Demographics: Shining a Light Into the Problem},
+@inproceedings{wu2023face,
+  title={Face recognition accuracy across demographics: Shining a light into the problem},
   author={Wu, Haiyu and Albiero, V{\'\i}tor and Krishnapriya, KS and King, Michael C and Bowyer, Kevin W},
-  journal={arXiv preprint arXiv:2206.01881},
-  year={2022}
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={1041--1050},
+  year={2023}
 }
 ```
 
